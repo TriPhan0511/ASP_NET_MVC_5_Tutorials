@@ -18,6 +18,14 @@ namespace MvcMovie
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            // NEW:
+            // You can also add a route to pass both the name and numtimes in parameters
+            // as route data in the URL.
+            routes.MapRoute(
+                name: "Hello",
+                url: "{controller}/{action}/{name}/{id}"
+                );
         }
     }
 }
