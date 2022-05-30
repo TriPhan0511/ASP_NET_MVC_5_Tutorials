@@ -19,7 +19,6 @@ namespace MvcMovie.Controllers
         {
             ViewBag.Message = $"Hello {name}";  
             ViewBag.NumTimes = numTimes;
-
             return View();
         }
     }

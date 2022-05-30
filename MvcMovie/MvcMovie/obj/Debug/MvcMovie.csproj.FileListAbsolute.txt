@@ -77,3 +77,7 @@ D:\Studying\DotNet\ASP_NET_MVC_5_Tutorials\MvcMovie\MvcMovie\obj\Debug\MvcMovie.
 D:\Studying\DotNet\ASP_NET_MVC_5_Tutorials\MvcMovie\MvcMovie\obj\Debug\MvcMovie.csproj.CopyComplete
 D:\Studying\DotNet\ASP_NET_MVC_5_Tutorials\MvcMovie\MvcMovie\obj\Debug\MvcMovie.dll
 D:\Studying\DotNet\ASP_NET_MVC_5_Tutorials\MvcMovie\MvcMovie\obj\Debug\MvcMovie.pdb
+D:\Studying\DotNet\ASP_NET_MVC_5_Tutorials\MvcMovie\MvcMovie\bin\EntityFramework.dll
+D:\Studying\DotNet\ASP_NET_MVC_5_Tutorials\MvcMovie\MvcMovie\bin\EntityFramework.SqlServer.dll
+D:\Studying\DotNet\ASP_NET_MVC_5_Tutorials\MvcMovie\MvcMovie\bin\EntityFramework.xml
+D:\Studying\DotNet\ASP_NET_MVC_5_Tutorials\MvcMovie\MvcMovie\bin\EntityFramework.SqlServer.xml
