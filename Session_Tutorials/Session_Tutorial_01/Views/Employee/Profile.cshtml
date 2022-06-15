@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Profile";
+    var employee = Session["Employee"] as Session_Tutorial_01.Models.Employee;
+}
+
+<h2>Profile</h2>
+
+<ul>
+    <li>UserName: @employee.UserName</li>
+    <li>Password: @employee.Password</li>
+    <li>Email: @employee.Email</li>
+</ul>
+

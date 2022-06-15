@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Register</h2>
+
+@if (ViewBag.ExistingPersonError != null)
+{
+    <h2>Error</h2>
+}
+
+<p>@ViewBag.ExistingPersonError</p>
+<p>@ViewBag.ErrorFromLoginAction</p>
+@*@using (Html.BeginForm())*@
+@using (Html.BeginForm("Register", "Person", FormMethod.Post))
+{
+    <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter name" />
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter password" />
+    </div>
+    <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter email" />
+    </div>
+    <input type="submit" value="Register" />
+}
+
+@*Display list of registerd people (Testing purpose)*@
+<hr />
+<p><strong>List of registered people (Testing purpose)</strong></p>
+@{
+    var people = Session["people"] as List<Session_Tutorial_01.Models.Person>;
+}
+@if (people != null)
+{
+    foreach (var person in people)
+    {
+        <ul>
+            <li>Name: @person.Name</li>
+            <li>Password: @person.Password</li>
+            <li>Email: @person.Email</li>
+        </ul>
+    }
+}
+

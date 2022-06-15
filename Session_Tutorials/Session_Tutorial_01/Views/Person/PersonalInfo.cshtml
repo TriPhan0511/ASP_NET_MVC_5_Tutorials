@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "Personal Information";
+    var currentPerson = Session["currentPerson"] as Session_Tutorial_01.Models.Person;
+}
+
+<h2>Personal Information</h2>
+<h3>Hello, @currentPerson.Name</h3>
+<p>Your profile</p>
+<ul>
+    <li>Name: @currentPerson.Name</li>
+    <li>Password: @currentPerson.Password</li>
+    <li>Email: @currentPerson.Email</li>
+</ul>
+<p>@Html.ActionLink("Log out", "Logout")</p>
+
+
+@*Display list of registerd people*@
+<hr />
+<p><strong>List of registered people (Testing purpose)</strong></p>
+@{
+    var people = Session["people"] as List<Session_Tutorial_01.Models.Person>;
+}
+@if (people != null)
+{
+    foreach (var person in people)
+    {
+        <ul>
+            <li>Name: @person.Name</li>
+            <li>Password: @person.Password</li>
+            <li>Email: @person.Email</li>
+        </ul>
+    }
+}
+

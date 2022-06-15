@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+}
+
+@{ 
+    var currentPerson = Session["currentPerson"] as Session_Tutorial_01.Models.Person;
+}
+
+@if (currentPerson == null)
+{
+    <h3>Hello, guest</h3>
+    <p>Please @Html.ActionLink("register", "Register") or @Html.ActionLink("log in", "Login")</p>
+}
+else
+{
+    <h3>Welcome back, @currentPerson.Name</h3>
+    <p>Click @Html.ActionLink("here", "PersonalInfo") to see your profile</p>
+    <p>Click @Html.ActionLink("here", "Information") to see all registered people</p>
+    <p>@Html.ActionLink("Log out", "Logout")</p>
+}
+
+
+
+@*Display list of registerd people (Testing purpose)*@
+<hr />
+<p><strong>List of registered people (Testing purpose)</strong></p>
+@{
+    var people = Session["people"] as List<Session_Tutorial_01.Models.Person>;
+}
+@if (people != null)
+{
+    foreach (var person in people)
+    {
+        <ul>
+            <li>Name: @person.Name</li>
+            <li>Password: @person.Password</li>
+            <li>Email: @person.Email</li>
+        </ul>
+    }
+}
+
+
+

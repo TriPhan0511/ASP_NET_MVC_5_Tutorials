@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Information";
+    var people = Session["people"] as List<Session_Tutorial_01.Models.Person>;
+}
+
+<h2>All registered people</h2>
+@foreach (var person in people)
+{
+    <ul>
+        <li>Name: @person.Name</li>
+        <li>Password: @person.Password</li>
+        <li>Email: @person.Email</li>
+    </ul>
+}

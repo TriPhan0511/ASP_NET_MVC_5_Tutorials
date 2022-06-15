@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+<p>@ViewBag.ErrorFromLoginAction</p>
+@using (Html.BeginForm())
+{
+    <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter name" />
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter password" />
+    </div>
+    <input type="submit" value="Log in" />
+}
+
+@*Display list of registerd people (Testing purpose)*@
+<hr />
+<p><strong>List of registered people (Testing purpose)</strong></p>
+@{
+    var people = Session["people"] as List<Session_Tutorial_01.Models.Person>;
+}
+@if (people != null)
+{
+    foreach (var person in people)
+    {
+        <ul>
+            <li>Name: @person.Name</li>
+            <li>Password: @person.Password</li>
+            <li>Email: @person.Email</li>
+        </ul>
+    }
+}
+
